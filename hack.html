@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fitur Ramah Disabilitas — KAI</title>
+  <style>
+    body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f2f2f2;color:#333;}
+    header {background:#fff;padding:10px 20px;display:flex;align-items:center;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    header img {height:60px;margin-right:20px;}
+    header h1 {margin:0;font-size:1.4rem;color:#003c77;}
+    nav {background:#003c77;padding:10px 20px;}
+    nav button {color:#fff;background:transparent;border:none;font-size:14px;margin-right:15px;cursor:pointer;}
+    nav button:hover {text-decoration:underline;}
+    .container {max-width:1100px;margin:auto;padding:20px;}
+    h2 {color:#003c77;margin-top:0;}
+    .card {background:#fff;border-radius:6px;padding:16px;box-shadow:0 2px 6px rgba(0,0,0,0.08);margin-bottom:20px;}
+    fieldset {border:1px solid #ccc;border-radius:6px;padding:10px;margin:10px 0;}
+    label {display:block;margin:6px 0;}
+    select,input[type="text"],textarea {width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;margin-top:4px;font-size:14px;}
+    button,.btn {padding:8px 14px;border:none;border-radius:4px;background:#f37021;color:#000;font-size:14px;cursor:pointer;}
+    button:hover,.btn:hover {background:#003c77;color:#fff;}
+    .muted {font-size:0.9em;color:#666;}
+    ul.info {list-style:none;padding:0;margin:0;}
+    ul.info li {margin:8px 0;}
+    .seat {
+    display: inline-block;
+    width: 70px;
+    height: 60px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+  }
+
+  /* tersedia */
+  .seat.available {
+    background: #e0e0e0; /* abu terang */
+  }
+
+  /* tidak tersedia */
+  .seat.unavailable {
+    background: #9e9e9e; /* abu gelap */
+    cursor: not-allowed;
+  }
+
+  /* ketika dipilih */
+  .seat.selected {
+    background: #4CAF50; /* hijau */
+    color: #fff;
+  }
+
+  .seat small {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    color: #333;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.kai.id/static/konten/logokai_main.png" alt="Logo KAI" />
+    <h1 style="margin:0;text-align:center">Opsi Khusus Penyandang Disabilitas, Lansia dan Ibu Hamil</h1>
+  </header>
+
+  <nav>
+    <button>Beranda</button>
+    <button>Pemesanan</button>
+    <button>Layanan</button>
+    <button>Bantuan</button>
+  </nav>
+
+  <div class="container">
+
+    <!-- SECTION 1: Layanan Disabilitas -->
+    <section id="disability-services" class="card">
+      <h2>Layanan Disabilitas, Lansia & Ibu Hamil</h2>
+      <form id="serviceForm">
+        <label><input type="checkbox" value="pendamping"> Layanan pendamping untuk penumpang disabilitas</label>
+        <label><input type="checkbox" value="penjemputan"> Penjemputan di stasiun</label>
+        <label><input type="checkbox" value="videoCall"> Video Call/ASL (Bahasa Isyarat Indonesia) untuk pengguna tunarungu</label>
+        <label><input type="checkbox" value="ibuHamil"> Pelayanan prioritas untuk penumpang ibu hamil</label>
+
+        <button type="submit" class="btn">Kirim Layanan</button>
+      </form>
+    </section>
+
+    <!-- SECTION 2: Pemilihan Kursi -->
+    <section id="seat-section" class="card">
+      <h2>Pemilihan Kursi</h2>
+      <form id="seatForm">
+        <label><input type="radio" name="seatOption" value="biasa"> Kursi Biasa</label>
+        <label><input type="radio" name="seatOption" value="dekatPintu"> Kursi Dekat Pintu Masuk</label>
+        <label><input type="radio" name="seatOption" value="pendamping"> Kursi Pendamping (otomatis 2 kursi)</label>
+
+        <label for="coachSelect">Pilih Gerbong</label>
+          <select id="coachSelect">
+            <option value="1">Gerbong 1</option>
+            <option value="2">Gerbong 2</option>
+            <option value="3">Gerbong 3</option>
+          </select>
+
+          <div style="margin-top:12px;display:flex;gap:8px;">
+            <button class="seat available" data-seat="1A">1A<small>Dekat pintu</small></button>
+  <button class="seat available" data-seat="1B">1B<small>Prioritas</small></button>
+  <button class="seat available" data-seat="1C">1C<small>Ruang lebih</small></button>
+  <button class="seat unavailable" data-seat="1D" disabled>1D<small>Terisi</small></button>
+  </div>
+
+        <div id="seatResult" class="muted" style="margin-top:10px;">Belum memilih kursi</div>
+        <button type="submit" class="btn">Konfirmasi Kursi</button>
+      </form>
+    </section>
+
+    <!-- SECTION 3: Tambahan -->
+   <aside class="card">
+        <h2>Informasi Layanan Tambahan</h2>
+        <p class="muted">Untuk layanan tambahan yang belum tersedia, silakan isi permintaan khusus.</p>
+        <button id="requestAssist">Minta Layanan Tambahan</button>
+
+        <script>
+           document.getElementById("requestAssist").addEventListener("click", () => {
+           window.location.href = "layanan.html"; 
+           });
+        </script>
+  </div>
+
+  <footer id="footer" class="page-footer footer-preset-3" style="margin-bottom:0px;">
+  <div class="footer-foot-1" style="background:#F08200;color:#fff;width:100%;">
+  <div class="container-fluid text-center" style="padding:10px 0;">
+    <p class="font-heading fz-6-s" style="margin:0;text-align:center">
+      ©️ 2025 PT KERETA API INDONESIA (PERSERO), All Rights Reserved
+    </p> 
+  </div>
+</div>
+
+</footer>
+
+
+  <script>
+  const seats = document.querySelectorAll('.seat');
+  const info = document.getElementById('seatResult');
+  const confirmBtn = document.querySelector('#seatForm button[type="submit"]');
+  let selectedSeats = [];
+
+  // clear kursi
+  function clearSeats() {
+    seats.forEach(s => s.setAttribute('aria-pressed', 'false'));
+    selectedSeats = [];
+  }
+
+  // klik manual kursi
+  seats.forEach(seat => {
+    seat.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (seat.getAttribute('aria-disabled') === "true") return;
+
+      // kalau bukan pendamping -> pilih satu
+      const pendampingRadio = document.querySelector('input[name="seatOption"][value="pendamping"]');
+      if (!pendampingRadio.checked) {
+        clearSeats();
+        seat.setAttribute('aria-pressed', 'true');
+        selectedSeats = [seat.dataset.seat];
+        info.textContent = "Kursi dipilih: " + selectedSeats.join(", ");
+      }
+    });
+  });
+
+  // jika radio pendamping dipilih -> otomatis pilih 2 kursi
+  document.querySelectorAll('input[name="seatOption"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      clearSeats();
+      if (radio.value === "pendamping" && radio.checked) {
+        const seatA = document.querySelector('.seat[data-seat="1A"]');
+        const seatB = document.querySelector('.seat[data-seat="1B"]');
+        seatA.setAttribute('aria-pressed', 'true');
+        seatB.setAttribute('aria-pressed', 'true');
+        selectedSeats = ["1A","1B"];
+        info.textContent = "Kursi dipilih untuk pendamping: " + selectedSeats.join(" & ");
+      } else {
+        info.textContent = "Belum memilih kursi";
+      }
+    });
+  });
+
+  // konfirmasi kursi
+  confirmBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (selectedSeats.length > 0) {
+      alert("Anda memilih kursi: " + selectedSeats.join(", "));
+    } else {
+      alert("Silakan pilih kursi terlebih dahulu");
+    }
+  });
+</script>
+
+</body>
+</html>
