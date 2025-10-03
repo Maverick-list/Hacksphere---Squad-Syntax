@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fitur Ramah Disabilitas — KAI</title>
   <a href="https://appetize.io/embed/b_mttoxueiea6ziehp6ns6tbzjqa" download>📥 ChatBot KAI</a>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
   <style>
     body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f2f2f2;color:#333;}
     header {background:#fff;padding:10px 20px;display:flex;align-items:center;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
@@ -68,7 +67,7 @@
     <img src="https://www.kai.id/static/konten/logokai_main.png" alt="Logo KAI" />
     <h1 style="margin:0;text-align:center">Opsi Khusus Penyandang Disabilitas, Lansia dan Ibu Hamil</h1>
   </header>
-<div id="map" style="height: 500px;"></div>
+
   <nav>
     <button>Beranda</button>
     <button>Pemesanan</button>
@@ -199,22 +198,6 @@
     }
   });
 </script>
-
-  <script>
-  // Buat map di dalam div #map
-  var map = L.map('map').setView([ -6.1754, 106.8272 ], 13); // Koordinat Monas, Jakarta
-
-  // Tambahkan tile dari OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Tambahkan marker
-  L.marker([-6.1754, 106.8272]).addTo(map)
-    .bindPopup('Monas - Jakarta')
-    .openPopup();
-</script>
-
 
 </body>
 </html>
