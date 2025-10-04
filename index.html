@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - KAI</title>
-  
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body { 
@@ -20,15 +18,14 @@
     }
     nav { 
       display: flex; 
-      justify-content: space-between; /* logo di kiri, menu di kanan */
+      justify-content: space-between;
       align-items: center;
     }
-    /* Logo */
     .logo img {
-      height: 40px; /* kecil di navbar */
+      height: 40px;
     }
 
-    /* Menu */
+   
     nav ul { 
       list-style: none; 
       margin: 0; 
@@ -44,7 +41,7 @@
       font-weight: bold; 
       display: flex; 
       align-items: center; 
-      gap: 8px;  /* jarak antara icon dan teks */
+      gap: 8px;  
       transition: color 0.3s;
     }
     nav ul li a i {
@@ -85,8 +82,6 @@
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
-
-/* Tombol bulat */
 .chatbot-button {
   position: fixed;
   bottom: 20px;
@@ -107,7 +102,7 @@
   height: 35px;
 }
 
-/* Jendela chat */
+
 .chatbot-window {
   position: fixed;
   bottom: 90px;
@@ -123,7 +118,7 @@
   z-index: 1000;
 }
 
-/* Header */
+
 .chat-header {
   background: #ff6600;
   color: white;
@@ -133,7 +128,7 @@
   font-weight: bold;
 }
 
-/* Body */
+
 .chat-body {
   flex: 1;
   padding: 10px;
@@ -141,7 +136,7 @@
   font-size: 14px;
 }
 
-/* Footer */
+
 .chat-footer {
   display: flex;
   border-top: 1px solid #ddd;
@@ -171,12 +166,12 @@ a {
 <body>
   <header>
     <nav>
-      <!-- Logo KAI -->
+     
       <div class="logo">
         <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg" alt="KAI Logo"></a>
       </div>
 
-      <!-- Menu -->
+   
       <ul>
         <li><a href="index.html"><i class="fas fa-home"></i> BERANDA</a></li>
         <li><a href="layanan.html"><i class="fas fa-concierge-bell"></i> LAYANAN</a></li>
@@ -193,7 +188,7 @@ a {
 </html>
 
 <main>
-  <!-- Hero Section -->
+  
   <section class="hero" style="background:url('https://www.kai.id/img/kereta.jpg') center/cover no-repeat; padding:80px 20px; text-align:center; color:white;">
     <h1>Selamat Datang di PT Kereta Api Indonesia</h1>
     <p>Nyaman, Cepat, dan Tepat Waktu untuk Perjalanan Anda</p>
@@ -213,55 +208,54 @@ a {
 </section>
 
   
-  <!-- Layanan Utama -->
- <!-- Layanan Utama -->
+
 <section class="layanan" style="padding:50px; text-align:center; background:#f4f4f4; color:#333;">
   <h2>Layanan Kami</h2>
   <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:30px;">
     
-    <!-- Card 1 -->
+   
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-train fa-3x" style="color:#ff6600;"></i>
       <h3>Angkutan Penumpang</h3>
       <p>Pesan tiket kereta dengan mudah dan cepat.</p>
     </div>
     
-    <!-- Card 2 -->
+  
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-box fa-3x" style="color:#ff6600;"></i>
       <h3>Angkutan Barang</h3>
       <p>Layanan logistik terpercaya untuk kebutuhan bisnis Anda.</p>
     </div>
     
-    <!-- Card 3 -->
+   
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-utensils fa-3x" style="color:#ff6600;"></i>
       <h3>Preorder Makanan</h3>
       <p>Pesan makanan favorit untuk perjalanan Anda.</p>
     </div>
     
-    <!-- Card 4 (Prioritas Khusus) -->
+ 
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-wheelchair fa-3x" style="color:#ff6600;"></i>
       <h3>Layanan Prioritas</h3>
       <p>Terdapat prioritas untuk disabilitas, lansia, dan ibu hamil agar lebih nyaman.</p>
     </div>
     
-    <!-- Card 5 -->
+    
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-building fa-3x" style="color:#ff6600;"></i>
       <h3>Pengusahaan Aset</h3>
       <p>Sewa aset KAI untuk bisnis maupun kebutuhan lainnya.</p>
     </div>
     
-    <!-- Card 6 -->
+   
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-mountain fa-3x" style="color:#ff6600;"></i>
       <h3>Wisata Rel Kereta</h3>
       <p>Nikmati perjalanan wisata eksklusif dengan kereta khusus.</p>
     </div>
 
-    <!-- Card 7 (FAQ) -->
+   
     <div style="background:white; padding:20px; border-radius:10px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
       <i class="fas fa-question-circle fa-3x" style="color:#ff6600;"></i>
       <h3>FAQ</h3>
@@ -272,7 +266,7 @@ a {
 </section>
 
 
-  <!-- Promo -->
+  
   <section class="promo" style="padding:40px; text-align:center;">
     <h2>Promo Terbaru</h2>
     <p>Dapatkan diskon hingga 30% untuk perjalanan bulan ini!</p>
@@ -280,7 +274,7 @@ a {
   </section>
 </main>
 <footer>
-    <!-- FOOTER BOTTOM -->
+   
   <div class="footer-foot-1" style="background:#F08200;color:#fff;width:100%;">
   <div class="container-fluid text-center" style="padding:15px 0;">
     <p class="font-heading fz-6-s" style="margin:0;text-align:center">
@@ -298,4 +292,5 @@ a {
 </script>
 
 </footer>
+
 
