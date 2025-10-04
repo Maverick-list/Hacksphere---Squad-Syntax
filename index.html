@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda - KAI</title>
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -58,6 +59,114 @@
       color: #ff6600;
     }
   </style>
+
+<style>
+    
+    .chatbot-logo {
+      position: fixed;      
+      bottom: 20px;         
+      right: 20px;          
+      z-index: 9999;       
+      cursor: pointer;     
+    }
+
+    .chatbot-logo img {
+  width: 70px;          
+  height: 70px;
+  border-radius: 34%;     
+  background: #ff6600;   
+  padding: 10px;          
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+  object-fit: contain;        
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chatbot-logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Tombol bulat */
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ff6600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.chatbot-button img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Jendela chat */
+.chatbot-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Header */
+.chat-header {
+  background: #ff6600;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+.chat-footer button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+a {
+  position: center;
+}
+
+
+  </style>
+
+
 </head>
 <body>
   <header>
@@ -74,6 +183,10 @@
         <li><a href="preorder.html"><i class="fas fa-ticket-alt"></i> PREORDER</a></li>
         <li><a href="login.html"><i class="fas fa-user"></i> LOGIN</a></li>
       </ul>
+    <a href="https://appetize.io/embed/b_mttoxueiea6ziehp6ns6tbzjqa?scale=130 center" target="_blank" class="chatbot-logo" width="200px" height="200px">
+    <img src="Kaibot.png" alt="Kaibot">
+    </a>
+  
     </nav>
   </header>
 </body>
@@ -158,8 +271,17 @@
   <div class="footer-foot-1" style="background:#F08200;color:#fff;width:100%;">
   <div class="container-fluid text-center" style="padding:15px 0;">
     <p class="font-heading fz-6-s" style="margin:0;text-align:center">
-      © 2025 PT KERETA API INDONESIA (PERSERO), All Rights Reserved
+      ©️ 2025 PT KERETA API INDONESIA (PERSERO), All Rights Reserved
     </p>
   </div>
 </div>
+<script>
+    function toggleChat() {
+  const chatWindow = document.getElementById("chatWindow");
+  chatWindow.style.display = (chatWindow.style.display === "flex") ? "none" : "flex";
+}
+
+
+</script>
+
 </footer>
