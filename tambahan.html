@@ -70,10 +70,10 @@
  <style> 
       body { margin: 0; font-family: Arial, sans-serif; background: #505066; color: rgb(0, 0, 0); } 
       header { background: #a03d3d; padding: 10px 40px; } 
-      nav { display: flex; justify-content: space-between; /* logo di kiri, menu di kanan */ align-items: center; } 
-      /* Logo */ 
-      .logo img { height: 40px; /* kecil di navbar */ } 
-      /* Menu */ 
+      nav { display: flex; justify-content: space-between; align-items: center; } 
+   
+   .logo img { height: 40px; } 
+     
       nav ul { list-style: none; margin: 0; padding: 0; display: flex; } 
       nav ul li { margin-left: 40px; } 
       nav ul li a { text-decoration: none; color: rgb(255, 255, 255); font-weight: bold; display: flex; align-items: center; gap: 8px; /* jarak antara icon dan teks */ transition: color 0.3s; } 
@@ -83,15 +83,13 @@
     </style> 
   </head> 
       <header> 
-      <nav> 
-        <!-- Logo KAI --> 
+      <nav>  
         <div class="logo"> 
           <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg" alt="KAI Logo"></a> 
-        </div> 
-        <!-- Menu --> 
+         </div> 
         <ul> 
           <li><a href="index.html"><i class="fas fa-home"></i> BERANDA</a></li> 
-          <li><a href="layanan.html"><i class="fas fa-concierge-bell"></i> LAYANAN</a></li> 
+         <li><a href="layanan.html"><i class="fas fa-concierge-bell"></i> LAYANAN</a></li> 
           <li><a href="preorder.html"><i class="fas fa-ticket-alt"></i> PREORDER</a></li> 
           <li><a href="login.html"><i class="fas fa-user"></i> LOGIN</a></li> 
         </ul> 
@@ -118,8 +116,7 @@
   <footer id="footer" class="page-footer footer-preset-3" style="margin-bottom:0px;">
   <div class="footer-top" style="background:#003c77;color:#fff;padding:20px 0;">
     <div class="container" style="display:flex;flex-wrap:wrap;gap:20px;">
-      
-      <!-- INFORMASI -->
+    
       <div class="footer-widget-info" style="flex:1;min-width:250px;">
         <h4 style="margin-bottom:10px">INFORMASI</h4>
         <div class="__content font-heading fz-6-ss __2-col">
@@ -137,14 +134,13 @@
           </div>
         </div>
       </div>
-
-      <!-- KONTAK KAMI -->
+ 
       <div class="footer-widget-contact" style="flex:1;min-width:250px;">
         <h4 style="margin-bottom:10px">KONTAK KAMI</h4>
         <div class="__content font-heading fz-6-ss">
           <div class="text-align:left"><i class="icon icon-location"></i><span> Kantor Pusat: Jalan Perintis Kemerdekaan No. 1 Bandung 40117</span></div>
           <div class="__phone"><i class="icon icon-phone-1"></i><span> Office Phone: 022-4230031, 4230039, 4230054</span></div>
-          <div class="__email"><i class="icon icon-paper-plane"></i><span> Email Korespondensi: dokumen@kai.id</span></div>
+           <div class="__email"><i class="icon icon-paper-plane"></i><span> Email Korespondensi: dokumen@kai.id</span></div>
           <div class="__address"><i class="icon icon-location"></i><span> Link Kantor Cabang <a href="https://www.kai.id/corporate/contact/1" style="color:#fff;text-decoration:underline;">Klik di sini</a></span></div>
           <div class="__phone"><i class="icon icon-phone-1"></i><span> Contact Center: 121 / (021) 121</span></div>
           <div class="__email"><i class="icon icon-paper-plane"></i><span> Layanan Pelanggan: cs@kai.id</span></div>
@@ -153,7 +149,6 @@
     </div>
   </div>
 
-  <!-- FOOTER BOTTOM -->
   <div class="footer-foot-1" style="background:#F08200;color:#fff;width:100%;">
   <div class="container-fluid text-center" style="padding:10px 0;">
     <p class="font-heading fz-6-s" style="margin:0;text-align:center">
@@ -184,6 +179,7 @@
       el.addEventListener("change", checkForm);
     });
   </script>
+
 
 
 </body></html>
