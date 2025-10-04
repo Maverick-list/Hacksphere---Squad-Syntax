@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preorder - KAI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #a03d3d;
+      padding: 15px;
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+nav { background: #1565c0; display: flex; justify-content: center; padding: 10px; } 
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; padding: 8px 12px; border-radius: 5px; transition: background 0.3s; } 
+    nav a:hover { background: #ff6f00; } 
+
+    .logo img {
+      height: 40px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h1 {
+     background: #a03d3d; color: white; padding: 15px; text-align: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      background: #ff6f00;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e65100;
+    }
+
+    /* MENU PREVIEW */
+    .menu-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .menu-item {
+      background: #fff8f0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .menu-item h3 {
+      margin: 10px 0 5px;
+      color: #a03d3d;
+    }
+    .menu-item p {
+      margin: 0;
+      font-weight: bold;
+      color: #444;
+    }
+    footer {
+      background: #F08200;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+ <header> 
+    <h1>Layanan KAI</h1> 
+  </header> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Beranda - KAI</title> 
+    <!-- Font Awesome --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+    <style> 
+      body { margin: 0; font-family: Arial, sans-serif; background: #505066; color: white; } 
+      header { background: #a03d3d; padding: 10px 40px; } 
+      nav { display: flex; justify-content: space-between; /* logo di kiri, menu di kanan */ align-items: center; } 
+      /* Logo */ 
+      .logo img { height: 40px; /* kecil di navbar */ } 
+      /* Menu */ 
+      nav ul { list-style: none; margin: 0; padding: 0; display: flex; } 
+      nav ul li { margin-left: 40px; } 
+      nav ul li a { text-decoration: none; color: rgb(255, 255, 255); font-weight: bold; display: flex; align-items: center; gap: 8px; /* jarak antara icon dan teks */ transition: color 0.3s; } 
+      nav ul li a i { font-size: 18px; color: #ccc; transition: color 0.3s; } 
+      nav ul li a:hover { color: #ff6600; } 
+      nav ul li a:hover i { color: #ff6600; } 
+    </style> 
+  </head> 
+      <header> 
+      <nav> 
+        <!-- Logo KAI --> 
+        <div class="logo"> 
+          <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg" alt="KAI Logo"></a> 
+        </div> 
+        <!-- Menu --> 
+        <ul> 
+          <li><a href="index.html"><i class="fas fa-home"></i> BERANDA</a></li> 
+          <li><a href="layanan.html"><i class="fas fa-concierge-bell"></i> LAYANAN</a></li> 
+          <li><a href="preorder.html"><i class="fas fa-ticket-alt"></i> PREORDER</a></li> 
+          <li><a href="login.html"><i class="fas fa-user"></i> LOGIN</a></li> 
+        </ul> 
+      </nav> 
+    </header> 
+
+  <!-- FORM -->
+  <div class="container">
+    <h1>Preorder Makanan</h1>
+    <form>
+      <div class="form-group">
+        <label for="nama">Nama Penumpang</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+      </div>
+
+      <div class="form-group">
+        <label for="kereta">Nomor Kereta</label>
+        <input type="text" id="kereta" placeholder="Contoh: Argo Parahyangan 7030" required>
+      </div>
+
+      <div class="form-group">
+        <label for="kursi">Nomor Kursi</label>
+        <input type="text" id="kursi" placeholder="Contoh: 12A" required>
+      </div>
+
+      <div class="form-group">
+        <label for="menu">Pilih Menu</label>
+        <select id="menu" required>
+          <option value="">-- Pilih Menu --</option>
+          <option value="nasi-goreng">Nasi Goreng Spesial</option>
+          <option value="ayam-bakar">Ayam Bakar + Nasi</option>
+          <option value="kopi">Kopi Panas</option>
+          <option value="teh">Teh Hangat</option>
+        </select>
+      </div>
+
+      <button type="submit">Pesan Sekarang</button>
+    </form>
+
+    <!-- MENU PREVIEW -->
+    <div class="menu-section">
+      <h2>Daftar Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="Nasi Goreng">
+          <h3>Nasi Goreng Spesial</h3>
+          <p>Rp 35.000</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8v_gYWmmIEeOOQMdoqDkL4h1Vnq4MCEYkkQ&s" alt="Ayam Bakar">
+          <h3>Ayam Bakar + Nasi</h3>
+          <p>Rp 40.000</p>
+        </div>
+        <div class="menu-item">
+          <img src="data:image/jpeg;base64,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" alt="Kopi">
+          <h3>Kopi Panas</h3>
+          <p>Rp 15.000</p>
+        </div>
+        <div class="menu-item">
+          <img src="data:image/jpeg;base64,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" alt="Teh">
+          <h3>Teh Hangat</h3>
+          <p>Rp 10.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 PT Kereta Api Indonesia (Persero), All Rights Reserved
+  </footer>
+</body>
+</html>
